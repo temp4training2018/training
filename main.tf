@@ -28,7 +28,7 @@ variable "aws_secret_key" {
 
 variable thing_count {
 #  type    = "string"
-  default = "1"
+  default = "3"
 }
 
 variable "aws_region" {
