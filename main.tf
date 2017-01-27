@@ -27,7 +27,7 @@ variable "aws_secret_key" {
 }
 
 variable thing_count {
-  type    = "string"
+#  type    = "string"
   default = "1"
 }
 
