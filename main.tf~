@@ -1,0 +1,35 @@
+#
+# DO NOT DELETE THESE LINES!
+#
+# Your subnet ID is:
+#
+#     subnet-ddd57685
+#
+# Your security group ID is:
+#
+#     sg-29ef374e
+#
+# Your AMI ID is:
+#
+#     ami-30217250
+#
+# Your Identity is:
+#
+#     autodesk-butterfly
+#
+
+provider "aws" {
+  access_key = "AKIAIMPYSQY3FO3PDZ7Q"
+  secret_key = "khwC6xMYici1iiNpmwGwWU37H2g64sa1EHk7oLeG"
+  region     = "us-west-1"
+}
+
+resource "ami_instance" "autodesk-butterfly" {
+  ami  = "ami-30217250"
+  instance_type = "t2.micro"
+   subnet_id = "ddd57685"
+   vpc_security_group = ["sg-29ef374e"]
+  tags {
+      Identity = "autodesk-butterfly"
+	}
+}
